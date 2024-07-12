@@ -1,7 +1,10 @@
 <%= form_with model: @user do |form| %>
-    <%= form.text_field :username %>
-    <%= form.text_field :email %>
-    <%= form.text_field :password %>
+    <%= form.label 'Username'%>
+    <%= form.text_field :username, placeholder: "Username" %>
+    <%= form.label "Email" %>
+    <%= form.email_field :email, placeholder: "example@example.com" %>
+    <%= form.label "Password" %>
+    <%= form.password_field :password, placeholder: "********" %>
     <%= form.submit "Create" %>
 <% end %>
 
@@ -13,6 +16,6 @@
         gap: 5px;
     }
     input {
-        padding: 7px;
+        padding: 10px;
     }
 </style>
