@@ -1,0 +1,21 @@
+<%= form_with model: @user, url: user_path(@user.id), method: :patch do |form| %>
+    <%= form.label 'Username'%>
+    <%= form.text_field :username, placeholder: "Username" %>
+    <%= form.label "Email" %>
+    <%= form.email_field :email, placeholder: "example@example.com" %>
+    <%= form.label "Password" %>
+    <%= form.password_field :password, placeholder: "********" %>
+    <%= form.submit "update" %>
+<% end %>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        gap: 5px;
+    }
+    input {
+        padding: 10px;
+    }
+</style>
